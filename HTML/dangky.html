@@ -92,11 +92,20 @@ function kiemtra() {
         return false;
       }  
     else {
-        alert("Đăng ký thành công")
+        showthongtin();
         return true;
     }
-
 }
+
+function showthongtin(){
+    let fn = $("#hoten").val();
+    let pass = $("#pass").val();
+    let repass = $("#repass").val();
+    let tentk = $("#tên_tk").val();
+    let sdt = $("#std").val();
+    confirm("THÔNG TIN ĐĂNG KÝ\n\nHọ Tên:" + fn + "\n" + "Số điện thoại:" + sdt + "\n" + "Tên Tài Khoản: " + tentk + "\n" +"Mật khẩu:" + pass + "\n" + "Mật khẩu nhập lại: " + repass )
+}
+
 </script>
 
 <body>
@@ -159,15 +168,15 @@ function kiemtra() {
                 <div id="form">
                     <h2>SIGN UP</h2>
                     <td><label for="hoten"><b>Họ tên</b></label></td>
-                    <td><input type="text" id="hoten"  placeholder="VD:Le Van A" required></td>
+                    <td><input type="text" id="hoten"  placeholder="VD:Le Van A"></td>
                     <td><label for="std"><b>Số điện thoại</b></label></td>
-                    <td><input type="text" id="std" required></td>
+                    <td><input type="text" id="std"></td>
                     <td><label for="tên_tk"><b>Tên tài khoản</b></label></td>
-                    <td><input type="text" id="tên_tk" required></td>
+                    <td><input type="text" id="tên_tk" ></td>
                     <td><label for="pass"><b>Mật khẩu</b></label></td>
-                    <td><input type="password" id="pass" placeholder="Phải có cả chữ và số" required></td>
+                    <td><input type="password" id="pass" placeholder="Phải có cả chữ và số"></td>
                     <td><label for="repass"><b>Nhập lại mật khẩu</b></label></td>
-                    <td><input type="password" id="repass" required></td>
+                    <td><input type="password" id="repass"></td>
                     <div id="xac_nhan">
                         <button type="button" onclick="kiemtra()"><b>SIGN UP</b></button> 
                     </div>
@@ -226,10 +235,6 @@ function kiemtra() {
                 </ul>
             </section>
         </footer>
-    </div>
-
-    <div class="footer-bottom">
-        Copyright © 2022 Sapo.vn - Nền tảng quản lý và bán hàng đa kênh được sử dụng nhiều nhất Việt Nam.
     </div>
 </body>
 
